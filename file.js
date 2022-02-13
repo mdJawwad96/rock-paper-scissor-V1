@@ -5,10 +5,17 @@ function computerPlay(comPlay) {
     } else if (comPlay == 2) {
         comPlay = "Paper"
     } else {
-        comPlay = "Scissors"
+        comPlay = "Scissor"
     }
 
-    console.log(comPlay);
 }
 
-computerPlay();
+// Write a function that takes user input
+
+function userPlay(userInp) {
+    userInp = prompt("Choose Rock, Paper or Scissor").toLowerCase();
+    console.log(userInp);
+}
+
+// computerPlay();
+// userPlay();
