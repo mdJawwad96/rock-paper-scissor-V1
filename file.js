@@ -10,50 +10,85 @@ function computerPlay(comPlay) {
     return comPlay;
 }
 
-computerPlay();
-// Write a function that takes user input
-
 function userPlay(userInp) {
     userInp = prompt("Choose Rock, Paper or Scissor").toLowerCase();
     return userInp;
 }
 
-// create a function that compare uservalue with computer value and return the result;
+let userScore = 0;
+let computerScore = 0;
+
+let start;
+function game(start) {
+     for (start = 0; start < 5; start++) {
+         let playerSelection = userPlay();
+         let computerSelection = computerPlay();
+        playRound(playerSelection, computerSelection);
+     }
+        if (userScore > computerScore) {
+            console.log('Congratulations, You win the game')
+            console.log('Your total score is ' + userScore)
+            console.log('Computer\'s score is ' + computerScore)
+        } else if (computerScore > userScore) {
+            console.log('Unfortunately, You lose this time');
+            console.log('Your total score is ' + userScore)
+            console.log('Computer\'s score is ' + computerScore)
+        } else {
+            console.log('I think it is a tie, play again to win')
+        }
+     return start
+ }   
+
+ console.log(game(start));
+
    function playRound(playerSelection, computerSelection) {
        if (playerSelection === 'rock' && computerSelection === 'rock') {
-        return "Hmm, it is a tie - you both selected rock";
+        console.log("Hmm, it is a tie - you both selected rock");
+        console.log('You score is '+ userScore);
+        console.log('Computer\'s score is ' + computerScore);
    } else if (playerSelection === 'rock' && computerSelection === 'paper') {
        computerScore++;
-       return "Oops, You lose - paper beat the rock";
+       console.log("Oops, You lose - paper beat the rock");
+       console.log('You score is '+ userScore);
+       console.log('Computer\'s score is ' + computerScore);
     } else if (playerSelection === 'rock' && computerSelection === 'scissor') {
         userScore++;
-        return "Yay! you win - rock beat the scissor";
+        console.log("Yay! you win - rock beat the scissor");
+        console.log('You score is '+ userScore);
+        console.log('Computer\'s score is ' + computerScore);
     } else if (playerSelection === 'paper' && computerSelection === 'rock') {
         userScore++;
-        return "Yay! you win - paper beat the rock";
+        console.log("Yay! you win - paper beat the rock");
+        console.log('You score is '+ userScore);
+        console.log('Computer\'s score is ' + computerScore);
     } else if (playerSelection === 'paper' && computerSelection === 'paper') {
-        return "Hmm, it is a tie - you both selected paper";
+        console.log("Hmm, it is a tie - you both selected paper");
+        console.log('You score is '+ userScore);
+        console.log('Computer\'s score is ' + computerScore);
      } else if (playerSelection === 'paper' && computerSelection === 'scissor') {
         computerScore++;
-         return "Oops, you lose - scissor beat the paper";
+        console.log("Oops, you lose - scissor beat the paper");
+        console.log('You score is '+ userScore);
+       console.log('Computer\'s score is ' + computerScore);
      } else if (playerSelection === 'scissor' && computerSelection === 'rock') {
         computerScore++;
-        return "Oops, you lose - rock beat the scissor";
+        console.log("Oops, you lose - rock beat the scissor");
+        console.log('You score is '+ userScore);
+        console.log('Computer\'s score is ' + computerScore);
     } else if (playerSelection === 'scissor' && computerSelection === 'paper') {
         userScore++;
-        return "Yay! scissor beat the paper";
+        console.log("Yay! scissor beat the paper");
+        console.log('You score is '+ userScore);
+        console.log('Computer\'s score is ' + computerScore);
      } else if (playerSelection === 'scissor' && computerSelection === 'scissor') {
-         return "Hmm, it is a tie - you both selected the scissor";
+        console.log("Hmm, it is a tie - you both selected the scissor");
+        console.log('You score is '+ userScore);
+        console.log('Computer\'s score is ' + computerScore);
      }
     else {
-        return "Something went wrong";
+        return ("Something went wrong");
     }
 }
-    let userScore = 0;
-    let computerScore = 0;
+
    let playerSelection = userPlay();
    let computerSelection = computerPlay();
-
-   console.log(playRound(playerSelection, computerSelection));
-   
-   // write a function which consist a loop and add score and in the end it shows the result
