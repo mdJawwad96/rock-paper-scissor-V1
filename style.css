@@ -1,0 +1,90 @@
+* {
+    background-color: #eae2b7;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    background-color: #003049;
+    color: #eae2b7;
+    padding: 20px;
+}
+
+#button {
+    text-align: center;
+    margin: 25px;
+    padding: 10px;
+}
+
+#rock,
+#paper,
+#scissor {
+    margin: 15px;
+    padding: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: solid 2px #003049;
+    color: #003049;
+}
+
+#paper {
+    background-color: #f77f00;
+}
+
+#paper:hover {
+    background-color: #eae2b7;
+    border: solid 2px #f77f00;
+    color: #f77f00;
+
+}
+
+
+#rock {
+    background-color: #2a9d8f;
+}
+
+#rock:hover {
+    background-color: #eae2b7;
+    border: solid 2px #2a9d8f;
+    color: #2a9d8f;
+
+}
+
+#scissor {
+    background-color: #75B06F;
+}
+
+#scissor:hover {
+    background-color: #eae2b7;
+    border: solid 2px #75B06F;
+    color: #75B06F;
+
+}
+
+
+#player {
+    display: flex;
+}
+
+#human,
+#computer {
+    text-align: center;
+    font-size: 35px;
+    flex: 1;
+    border: solid 2px #003049;
+    border-radius: 10px;
+    margin: 25px;
+    padding: 25px;
+    color: #003049;
+}
+
+
+#result {
+    text-align: center;
+    font-size: 40px;
+    margin: 50px;
+    color: #003049;
+}

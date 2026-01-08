@@ -9,16 +9,16 @@ function computerPlay(comPlay) {
     }
     return comPlay;
 }
-
+/** 
 function userPlay(userInp) {
     userInp = prompt("Choose Rock, Paper or Scissor").toLowerCase();
     return userInp;
-}
+} */
 
 let userScore = 0;
 let computerScore = 0;
 
-let start;
+ /** let start;
 function game(start) {
      for (start = 0; start < 5; start++) {
          let playerSelection = userPlay();
@@ -39,7 +39,7 @@ function game(start) {
      return start
  }   
 
- console.log(game(start));
+ console.log(game(start)); */
 
    function playRound(playerSelection, computerSelection) {
        if (playerSelection === 'rock' && computerSelection === 'rock') {
@@ -90,5 +90,13 @@ function game(start) {
     }
 }
 
-   let playerSelection = userPlay();
+   //let playerSelection = userPlay();
    let computerSelection = computerPlay();
+
+   const rck = document.querySelector("#rock");
+   const ppr = document.querySelector("#paper");
+   const scsr = document.querySelector("#scissor");
+
+   rck.addEventListener("click", () => {
+    console.log("Logged")
+   });
